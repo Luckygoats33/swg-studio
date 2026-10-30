@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SWG Studio | Creative Digital Studio Building Systems That Grow Brands</title>
+  <meta name="description" content="SWG Studio is a creative digital studio specializing in web design, growth marketing, AI automation, and conversion analytics. We build systems that grow brands.">
+  <meta property="og:title" content="SWG Studio | Digital Systems That Grow Brands">
+  <meta property="og:description" content="Web design, growth marketing, AI automation, and conversion analytics. We build systems that grow brands.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,800;0,9..40,900;1,9..40,400;1,9..40,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "SWG Studio",
+    "description": "Creative digital studio: web design, growth marketing, AI automation, and conversion analytics.",
+    "url": "https://swg.studio"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/v3/" class="nav-logo" aria-label="SWG Studio home">
+        SWG<span class="logo-accent">.</span>studio
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== MOBILE MENU OVERLAY ===== -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <ul class="mobile-menu-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#recognition">Recognition</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ===== FLOATING NEW PROJECT PILL ===== -->
+  <a href="#contact" class="floating-pill" aria-label="Start a new project">New Project?</a>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <h1 class="hero-headline reveal-text">Creative digital studio, building systems that grow brands.</h1>
+        <div class="hero-meta">
+          <div class="clutch-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <span>5-Star Rated Studio</span>
+          </div>
+          <a href="#contact" class="hero-cta-round" aria-label="Contact us">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="hero-rotated-text" aria-hidden="true">Building digital systems</div>
+    </div>
+  </section>
+
+  <!-- ===== AWARD TICKER ===== -->
+  <div class="ticker" aria-label="Awards and credentials">
+    <div class="ticker-track">
+      <span class="ticker-item">Award-Winning Digital Studio</span>
+      <span class="ticker-sep">&mdash;</span>
+      <span class="ticker-item">Conversion-First Design</span>
+      <span class="ticker-sep">&mdash;</span>
+      <span class="ticker-item">Full-Stack Growth Systems</span>
+      <span class="ticker-sep">&mdash;</span>
+      <span class="ticker-item">AI-Powered Automation</span>
+      <span class="ticker-sep">&mdash;</span>
+      <span class="ticker-item">Data-Driven Results</span>
+      <span class="ticker-sep">&mdash;</span>
+      <span class="ticker-item">Award-Winning Digital Studio</span>
+      <span class="ticker-sep">&mdash;</span>
+      <span class="ticker-item">Conversion-First Design</span>
+      <span class="ticker-sep">&mdash;</span>
+      <span class="ticker-item">Full-Stack Growth Systems</span>
+      <span class="ticker-sep">&mdash;</span>
+      <span class="ticker-item">AI-Powered Automation</span>
+      <span class="ticker-sep">&mdash;</span>
+      <span class="ticker-item">Data-Driven Results</span>
+      <span class="ticker-sep">&mdash;</span>
+    </div>
+  </div>
+
+  <!-- ===== FEATURED WORK CAROUSEL ===== -->
+  <section class="section carousel-section" id="work">
+    <div class="container">
+      <div class="carousel-header">
+        <h2 class="section-heading reveal-text">Featured Work</h2>
+        <div class="carousel-controls">
+          <span class="carousel-counter"><span id="carousel-current">01</span> / <span id="carousel-total">03</span></span>
+          <button class="carousel-btn" id="carousel-prev" aria-label="Previous slide">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          </button>
+          <button class="carousel-btn" id="carousel-next" aria-label="Next slide">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="carousel-viewport">
+        <div class="carousel-track" id="carousel-track">
+          <div class="carousel-slide">
+            <div class="slide-media">
+              <video src="../assets/video/case-study-01.mp4" autoplay loop muted playsinline poster="../assets/img/case-study-01.png"></video>
+            </div>
+            <div class="slide-info">
+              <h3>E-commerce Brand Overhaul</h3>
+              <div class="slide-tags">
+                <span class="tag">Web Design</span>
+                <span class="tag">Growth Marketing</span>
+                <span class="tag">CRO</span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="slide-media">
+              <video src="../assets/video/case-study-02.mp4" autoplay loop muted playsinline poster="../assets/img/case-study-02.png"></video>
+            </div>
+            <div class="slide-info">
+              <h3>Interactive Diagnostic Dashboard</h3>
+              <div class="slide-tags">
+                <span class="tag">Interactive</span>
+                <span class="tag">Analytics</span>
+                <span class="tag">UI/UX</span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="slide-media">
+              <video src="../assets/video/case-study-03.mp4" autoplay loop muted playsinline poster="../assets/img/case-study-03.png"></video>
+            </div>
+            <div class="slide-info">
+              <h3>AI Content Engine & Automation</h3>
+              <div class="slide-tags">
+                <span class="tag">AI Automation</span>
+                <span class="tag">Email</span>
+                <span class="tag">Content</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="about-body reveal-text">SWG Studio is the digital services arm of Support Wellness Global, specializing in web design, growth marketing, AI automation, and conversion analytics. With over a decade of experience and a combined portfolio of 200+ projects, we deliver innovative and impactful systems tailored to brands that have outgrown their digital presence.</p>
+          <a href="#work" class="text-link">See our work <span>&rsaquo;</span></a>
+        </div>
+        <div class="about-stats">
+          <div class="stat-item">
+            <span class="stat-number" data-count="200" data-suffix="+">0</span>
+            <span class="stat-label">successful studio projects</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="12" data-suffix="+">0</span>
+            <span class="stat-label">years building digital</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="98" data-suffix="%">0</span>
+            <span class="stat-label">client retention rate</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SHOWREEL ===== -->
+  <section class="section showreel-section">
+    <div class="container">
+      <div class="showreel-grid">
+        <div class="showreel-video">
+          <video src="../assets/video/hero-bg.mp4" autoplay loop muted playsinline poster="../assets/img/hero-bg.png"></video>
+        </div>
+        <div class="showreel-info">
+          <h2 class="section-heading reveal-text">SWG Studio Showreel</h2>
+          <p>SWG Studio is a creative digital studio building systems that grow brands. From custom websites and connected growth systems to AI-powered automation and interactive experiences, we partner with businesses ready to transform how they show up online.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ACCORDION ===== -->
+  <section class="section services-section" id="services">
+    <div class="container">
+      <h2 class="section-heading reveal-text">Creative Services</h2>
+
+      <div class="accordion" id="services-accordion">
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span class="accordion-number">01</span>
+            <span class="accordion-title">Web Design & Development</span>
+            <svg class="accordion-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="accordion-panel">
+            <div class="accordion-tags">
+              <span class="tag">Custom Design</span>
+              <span class="tag">Responsive</span>
+              <span class="tag">CMS</span>
+              <span class="tag">E-Commerce</span>
+              <span class="tag">UI/UX</span>
+              <span class="tag">Motion</span>
+            </div>
+            <p>Custom websites with clear messaging, conversion architecture, responsive performance, and a CMS your team can actually use. No templates. No themes. Built from the problem.</p>
+            <a href="#contact" class="text-link">Learn more about Web Design <span>&rsaquo;</span></a>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span class="accordion-number">02</span>
+            <span class="accordion-title">Growth Marketing</span>
+            <svg class="accordion-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="accordion-panel">
+            <div class="accordion-tags">
+              <span class="tag">Meta Ads</span>
+              <span class="tag">Google Ads</span>
+              <span class="tag">Landing Pages</span>
+              <span class="tag">Email</span>
+              <span class="tag">CRO</span>
+              <span class="tag">Content</span>
+            </div>
+            <p>Campaigns that connect to the site, landing pages that match the ad, email sequences that follow the funnel, and analytics that tell you what happened and what to do next.</p>
+            <a href="#contact" class="text-link">Learn more about Growth Marketing <span>&rsaquo;</span></a>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span class="accordion-number">03</span>
+            <span class="accordion-title">AI & Automation</span>
+            <svg class="accordion-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="accordion-panel">
+            <div class="accordion-tags">
+              <span class="tag">AI Agents</span>
+              <span class="tag">Workflows</span>
+              <span class="tag">Chatbots</span>
+              <span class="tag">Content AI</span>
+              <span class="tag">Integrations</span>
+            </div>
+            <p>Automated lead qualification, intelligent chatbots, content generation systems, workflow automation, and AI-powered analytics. Build the machine that runs while you sleep.</p>
+            <a href="#contact" class="text-link">Learn more about AI & Automation <span>&rsaquo;</span></a>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span class="accordion-number">04</span>
+            <span class="accordion-title">Conversion Analytics</span>
+            <svg class="accordion-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="accordion-panel">
+            <div class="accordion-tags">
+              <span class="tag">GA4</span>
+              <span class="tag">GTM</span>
+              <span class="tag">Attribution</span>
+              <span class="tag">A/B Testing</span>
+              <span class="tag">Dashboards</span>
+            </div>
+            <p>Event tracking that matters, attribution that works, dashboards that drive decisions, and A/B testing that proves the hypothesis. If you cannot measure it, you cannot improve it.</p>
+            <a href="#contact" class="text-link">Learn more about Conversion Analytics <span>&rsaquo;</span></a>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span class="accordion-number">05</span>
+            <span class="accordion-title">Interactive Experiences</span>
+            <svg class="accordion-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="accordion-panel">
+            <div class="accordion-tags">
+              <span class="tag">WebGL</span>
+              <span class="tag">3D</span>
+              <span class="tag">Interactive Tools</span>
+              <span class="tag">Motion Design</span>
+              <span class="tag">Diagnostics</span>
+            </div>
+            <p>Custom interactive experiences, diagnostic tools, 3D product storytelling, and motion design. Build the site people remember and the system your team can run.</p>
+            <a href="#contact" class="text-link">Learn more about Interactive Experiences <span>&rsaquo;</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CLIENT LOGOS ===== -->
+  <section class="section clients-section">
+    <div class="container">
+      <div class="clients-grid">
+        <div class="client-logo">Salesforce</div>
+        <div class="client-logo">AMD</div>
+        <div class="client-logo">Red Bull</div>
+        <div class="client-logo">HARMAN</div>
+        <div class="client-logo">Samsung</div>
+        <div class="client-logo">Coinbase</div>
+        <div class="client-logo">Vogue Business</div>
+        <div class="client-logo">Space Needle</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BIG QUOTE ===== -->
+  <section class="section quote-section">
+    <div class="container">
+      <div class="quote-marks" aria-hidden="true">&ldquo;</div>
+      <blockquote class="big-quote reveal-text">
+        SWG Studio &ndash; <span class="quote-highlight">Crafting Unforgettable Brands</span> with Strategic Design, <span class="quote-highlight">Innovation</span>, and Impact.
+      </blockquote>
+      <div class="quote-marks quote-marks-end" aria-hidden="true">&rdquo;</div>
+    </div>
+  </section>
+
+  <!-- ===== RECOGNITION ===== -->
+  <section class="section recognition-section" id="recognition">
+    <div class="container">
+      <div class="recognition-header">
+        <span class="recognition-rule"></span>
+        <span class="recognition-label">SWG Studio Recognition</span>
+      </div>
+      <div class="recognition-list">
+        <div class="recognition-row">
+          <span class="recognition-title">Conversion-First Design Methodology</span>
+          <span class="recognition-category">Methodology</span>
+        </div>
+        <div class="recognition-row">
+          <span class="recognition-title">Full-Stack Growth System Architecture</span>
+          <span class="recognition-category">Framework</span>
+        </div>
+        <div class="recognition-row">
+          <span class="recognition-title">AI-Powered Automation Integrations</span>
+          <span class="recognition-category">Innovation</span>
+        </div>
+        <div class="recognition-row">
+          <span class="recognition-title">Data-Driven CRO & Analytics</span>
+          <span class="recognition-category">Analytics</span>
+        </div>
+        <div class="recognition-row">
+          <span class="recognition-title">Interactive Experience Design</span>
+          <span class="recognition-category">Design</span>
+        </div>
+        <div class="recognition-row">
+          <span class="recognition-title">Enterprise Website Architecture</span>
+          <span class="recognition-category">Development</span>
+        </div>
+        <div class="recognition-row">
+          <span class="recognition-title">Campaign-to-Page Continuity Systems</span>
+          <span class="recognition-category">Growth</span>
+        </div>
+        <div class="recognition-row">
+          <span class="recognition-title">Custom CMS & Headless Builds</span>
+          <span class="recognition-category">Development</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WORK GRID ===== -->
+  <section class="section work-grid-section">
+    <div class="container">
+      <h2 class="section-heading reveal-text">Selected Projects</h2>
+      <div class="work-grid">
+        <div class="work-card fade-up">
+          <div class="work-card-badge">01</div>
+          <div class="work-card-media">
+            <video src="../assets/video/case-study-01.mp4" autoplay loop muted playsinline poster="../assets/img/case-study-01.png"></video>
+          </div>
+          <h3>E-commerce Brand Overhaul</h3>
+          <div class="work-card-tags">
+            <span class="tag">Web Design</span>
+            <span class="tag">Growth Marketing</span>
+            <span class="tag">CRO</span>
+          </div>
+          <a href="#contact" class="text-link">View project <span>&rsaquo;</span></a>
+        </div>
+        <div class="work-card fade-up">
+          <div class="work-card-badge">02</div>
+          <div class="work-card-media">
+            <video src="../assets/video/case-study-02.mp4" autoplay loop muted playsinline poster="../assets/img/case-study-02.png"></video>
+          </div>
+          <h3>Interactive Diagnostic Dashboard</h3>
+          <div class="work-card-tags">
+            <span class="tag">Interactive</span>
+            <span class="tag">Analytics</span>
+            <span class="tag">UI/UX</span>
+          </div>
+          <a href="#contact" class="text-link">View project <span>&rsaquo;</span></a>
+        </div>
+        <div class="work-card fade-up">
+          <div class="work-card-badge">03</div>
+          <div class="work-card-media">
+            <video src="../assets/video/case-study-03.mp4" autoplay loop muted playsinline poster="../assets/img/case-study-03.png"></video>
+          </div>
+          <h3>AI Content Engine & Automation</h3>
+          <div class="work-card-tags">
+            <span class="tag">AI Automation</span>
+            <span class="tag">Email</span>
+            <span class="tag">Content</span>
+          </div>
+          <a href="#contact" class="text-link">View project <span>&rsaquo;</span></a>
+        </div>
+      </div>
+      <div class="work-grid-footer">
+        <a href="#work" class="text-link">View all projects <span>&rsaquo;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <div class="recognition-header">
+        <span class="recognition-rule"></span>
+        <span class="recognition-label">SWG Studio</span>
+      </div>
+      <div class="accordion" id="faq-accordion">
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span class="accordion-number">01.</span>
+            <span class="accordion-title">What services does SWG Studio offer?</span>
+            <svg class="accordion-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="accordion-panel">
+            <p>SWG Studio offers five core services:</p>
+            <ul>
+              <li>Web Design & Development</li>
+              <li>Growth Marketing</li>
+              <li>AI & Automation</li>
+              <li>Conversion Analytics</li>
+              <li>Interactive Experiences</li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span class="accordion-number">02.</span>
+            <span class="accordion-title">What industries does SWG Studio work with?</span>
+            <svg class="accordion-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="accordion-panel">
+            <p>We work across e-commerce, health & wellness, professional services, SaaS, and consumer brands. Our systems-first approach adapts to any industry where digital presence drives revenue.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span class="accordion-number">03.</span>
+            <span class="accordion-title">What differentiates SWG Studio from other agencies?</span>
+            <svg class="accordion-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="accordion-panel">
+            <p>Five pillars define our approach:</p>
+            <ul>
+              <li><strong>Systems Thinking</strong> &ndash; Every piece we build connects to the others.</li>
+              <li><strong>Conversion Architecture</strong> &ndash; Design decisions driven by data, not trends.</li>
+              <li><strong>AI-Native Workflow</strong> &ndash; Automation built into the foundation, not bolted on.</li>
+              <li><strong>Senior Operators</strong> &ndash; No account managers between you and the builders.</li>
+              <li><strong>Measurable Impact</strong> &ndash; If we cannot prove it works, we do not ship it.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span class="accordion-number">04.</span>
+            <span class="accordion-title">What does a typical engagement look like?</span>
+            <svg class="accordion-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="accordion-panel">
+            <p>Every engagement follows our four-phase process: Diagnose, Align, Build, Measure. We start with a diagnostic to find the real bottleneck, align on strategy and scope, build the connected system, and measure results to prove it works. Fixed scope, fixed fee, no surprises.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span class="accordion-number">05.</span>
+            <span class="accordion-title">How do I start a project with SWG Studio?</span>
+            <svg class="accordion-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="accordion-panel">
+            <p>Fill out the contact form below or email us at will@supportwellnessglobal.com. Tell us where it hurts. We will send back a diagnosis, a recommended plan, and a fixed-fee proposal within 48 hours.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span class="accordion-number">06.</span>
+            <span class="accordion-title">What are SWG Studio's pricing tiers?</span>
+            <svg class="accordion-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="accordion-panel">
+            <p>Three clear paths: Foundation (starting at $12k) for businesses that need a website that represents them. Growth System (starting at $25k) for teams that need campaigns and websites to connect. Interactive Flagship (starting at $45k) for brands ready for a signature digital experience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <h2 class="contact-heading reveal-text">Get in Touch with SWG Studio</h2>
+
+      <form class="contact-form" id="contact-form" action="mailto:will@supportwellnessglobal.com" method="post" enctype="text/plain">
+        <div class="form-group">
+          <label class="form-label">I'm interested in...</label>
+          <div class="checkbox-group">
+            <label class="checkbox-item"><input type="checkbox" name="interest" value="Web Design"><span>Web Design</span></label>
+            <label class="checkbox-item"><input type="checkbox" name="interest" value="Growth Marketing"><span>Growth Marketing</span></label>
+            <label class="checkbox-item"><input type="checkbox" name="interest" value="AI Automation"><span>AI Automation</span></label>
+            <label class="checkbox-item"><input type="checkbox" name="interest" value="Analytics"><span>Analytics</span></label>
+            <label class="checkbox-item"><input type="checkbox" name="interest" value="Content"><span>Content</span></label>
+            <label class="checkbox-item"><input type="checkbox" name="interest" value="Other"><span>Other</span></label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Project budget</label>
+          <div class="radio-group">
+            <label class="radio-item"><input type="radio" name="budget" value="Under $12k"><span>Under $12k</span></label>
+            <label class="radio-item"><input type="radio" name="budget" value="$12k-$25k"><span>$12k - $25k</span></label>
+            <label class="radio-item"><input type="radio" name="budget" value="$25k-$50k"><span>$25k - $50k</span></label>
+            <label class="radio-item"><input type="radio" name="budget" value="$50k+"><span>$50k+</span></label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="contact-name">Your Name</label>
+            <input type="text" id="contact-name" name="name" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contact-email">Your Email</label>
+            <input type="email" id="contact-email" name="email" class="form-input" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="contact-message">Tell us about your project</label>
+          <textarea id="contact-message" name="message" class="form-input form-textarea" rows="4"></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">
+          Send Message
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#recognition">Recognition</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Web Design</a></li>
+            <li><a href="#services">Growth Marketing</a></li>
+            <li><a href="#services">AI & Automation</a></li>
+            <li><a href="#services">Conversion Analytics</a></li>
+            <li><a href="#services">Interactive Experiences</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-social">
+        <a href="#">Behance</a>
+        <a href="#">Dribbble</a>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-logo">SWG<span class="logo-accent">.</span>studio</div>
+        <div class="footer-info">
+          <span>will@supportwellnessglobal.com</span>
+        </div>
+        <div class="footer-copy">&copy; 2026 Support Wellness Global. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BOTTOM CONTACT BAR ===== -->
+  <div class="bottom-bar">
+    <a href="#contact" class="bottom-bar-link">Contact</a>
+    <a href="mailto:will@supportwellnessglobal.com" class="bottom-bar-link">Email us</a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
