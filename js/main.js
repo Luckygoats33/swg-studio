@@ -1,18 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   initNav();
   initNetworkCanvas();
   initDiagnostic();
   initScrollAnimations();
   initCounters();
+
+  if (!prefersReducedMotion) {
+    initCustomCursor();
+    initMagneticButtons();
+    initTextScramble();
+    initCardTilt();
+    initParallax();
+  }
 });
 
 function initNav() {
   const nav = document.querySelector('.nav');
-  let lastScroll = 0;
   window.addEventListener('scroll', () => {
-    const y = window.scrollY;
-    nav.classList.toggle('scrolled', y > 60);
-    lastScroll = y;
+    nav.classList.toggle('scrolled', window.scrollY > 60);
   }, { passive: true });
 }
 
@@ -50,8 +57,7 @@ function initNetworkCanvas() {
         vy: (Math.random() - 0.5) * 0.3,
         r: hasLabel ? 4 : 2,
         label: hasLabel ? labels[i] : null,
-        pulse: Math.random() * Math.PI * 2,
-        connected: false
+        pulse: Math.random() * Math.PI * 2
       });
     }
   }
@@ -235,4 +241,189 @@ function initCounters() {
   }, { threshold: 0.5 });
 
   counters.forEach(el => observer.observe(el));
+}
+
+// =========================================
+// CUSTOM CURSOR
+// =========================================
+function initCustomCursor() {
+  const ring = document.querySelector('.cursor-ring');
+  if (!ring || window.matchMedia('(pointer: coarse)').matches) return;
+
+  let mx = -100, my = -100, cx = -100, cy = -100;
+
+  document.addEventListener('mousemove', (e) => {
+    mx = e.clientX;
+    my = e.clientY;
+  });
+
+  const interactiveSelectors = 'a, button, .symptom-card, .service-card, .work-card, .lab-card, .plan-card, .plan-cta, .btn-primary, .btn-secondary, .nav-cta';
+
+  document.addEventListener('mouseover', (e) => {
+    if (e.target.closest(interactiveSelectors)) {
+      ring.classList.add('expanded');
+    }
+  });
+
+  document.addEventListener('mouseout', (e) => {
+    if (e.target.closest(interactiveSelectors)) {
+      ring.classList.remove('expanded');
+    }
+  });
+
+  document.addEventListener('mouseleave', () => {
+    ring.style.opacity = '0';
+  });
+
+  document.addEventListener('mouseenter', () => {
+    ring.style.opacity = '1';
+  });
+
+  function animateCursor() {
+    cx += (mx - cx) * 0.15;
+    cy += (my - cy) * 0.15;
+    ring.style.transform = `translate(${cx}px, ${cy}px) translate(-50%, -50%)`;
+    requestAnimationFrame(animateCursor);
+  }
+  animateCursor();
+}
+
+// =========================================
+// MAGNETIC BUTTONS
+// =========================================
+function initMagneticButtons() {
+  const btns = document.querySelectorAll('.btn-primary, .nav-cta, .plan-cta.primary');
+  const threshold = 80;
+
+  btns.forEach(btn => {
+    btn.classList.add('magnetic-btn');
+
+    btn.addEventListener('mousemove', (e) => {
+      const rect = btn.getBoundingClientRect();
+      const bx = rect.left + rect.width / 2;
+      const by = rect.top + rect.height / 2;
+      const dx = e.clientX - bx;
+      const dy = e.clientY - by;
+      const dist = Math.hypot(dx, dy);
+
+      if (dist < threshold) {
+        const pull = (1 - dist / threshold) * 0.35;
+        btn.style.transform = `translate(${dx * pull}px, ${dy * pull}px)`;
+      }
+    });
+
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = '';
+    });
+  });
+}
+
+// =========================================
+// TEXT SCRAMBLE
+// =========================================
+function initTextScramble() {
+  const chars = '!<>-_\\/[]{}=+*^?#________';
+  const headings = document.querySelectorAll('.section-heading');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        scrambleElement(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  headings.forEach(el => observer.observe(el));
+
+  function scrambleElement(el) {
+    const original = el.textContent;
+    const len = original.length;
+    const duration = 600;
+    const start = performance.now();
+
+    function frame(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const revealIndex = Math.floor(progress * len);
+
+      let output = '';
+      for (let i = 0; i < len; i++) {
+        if (original[i] === ' ' || original[i] === '\n') {
+          output += original[i];
+        } else if (i < revealIndex) {
+          output += original[i];
+        } else {
+          output += chars[Math.floor(Math.random() * chars.length)];
+        }
+      }
+      el.textContent = output;
+
+      if (progress < 1) {
+        requestAnimationFrame(frame);
+      } else {
+        el.textContent = original;
+      }
+    }
+    requestAnimationFrame(frame);
+  }
+}
+
+// =========================================
+// 3D CARD TILT
+// =========================================
+function initCardTilt() {
+  const cards = document.querySelectorAll('.service-card, .work-card, .lab-card, .plan-card');
+  const maxTilt = 4;
+
+  cards.forEach(card => {
+    card.classList.add('tilt-card');
+
+    const highlight = document.createElement('div');
+    highlight.classList.add('tilt-highlight');
+    card.appendChild(highlight);
+
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      const rotateY = ((x - centerX) / centerX) * maxTilt;
+      const rotateX = ((centerY - y) / centerY) * maxTilt;
+
+      card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-3px)`;
+
+      const pctX = (x / rect.width) * 100;
+      const pctY = (y / rect.height) * 100;
+      highlight.style.background = `radial-gradient(circle at ${pctX}% ${pctY}%, rgba(0, 216, 240, 0.06) 0%, transparent 60%)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+      highlight.style.background = '';
+    });
+  });
+}
+
+// =========================================
+// PARALLAX
+// =========================================
+function initParallax() {
+  const heroBg = document.querySelector('.hero-bg');
+  let ticking = false;
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const scrollY = window.scrollY;
+        if (heroBg && scrollY < window.innerHeight) {
+          heroBg.style.transform = `translateY(${scrollY * 0.4}px)`;
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
 }
