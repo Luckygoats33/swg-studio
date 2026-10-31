@@ -976,6 +976,125 @@ input, textarea { font-family: inherit; }
 }
 
 /* =========================================
+   CUSTOM CURSOR
+   ========================================= */
+.cursor {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: var(--orange);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s, opacity 0.2s;
+  mix-blend-mode: difference;
+}
+
+.cursor-follower {
+  position: fixed;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--orange);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s var(--ease-out), height 0.3s var(--ease-out), border-color 0.3s, opacity 0.3s;
+  opacity: 0.5;
+}
+
+.cursor.hover {
+  width: 48px;
+  height: 48px;
+  opacity: 0.3;
+}
+
+.cursor-follower.hover {
+  width: 64px;
+  height: 64px;
+  border-color: var(--white);
+  opacity: 0.2;
+}
+
+.cursor.hidden, .cursor-follower.hidden { opacity: 0; }
+
+/* =========================================
+   HERO VIDEO BACKGROUND
+   ========================================= */
+.hero-video-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-video-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.15;
+}
+
+.hero-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.95) 70%, var(--white) 100%);
+}
+
+.hero-content, .hero-meta, .hero-rotated-text {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================================
+   VIDEO BREAK SECTIONS
+   ========================================= */
+.video-break {
+  position: relative;
+  height: 50vh;
+  min-height: 320px;
+  overflow: hidden;
+}
+
+.video-break-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 120%;
+  object-fit: cover;
+  top: -10%;
+}
+
+.video-break-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.video-break-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.video-break-label {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.video-break-alt {
+  height: 40vh;
+  min-height: 240px;
+}
+
+/* =========================================
    SCROLL REVEAL
    ========================================= */
 .fade-up {
@@ -997,6 +1116,74 @@ input, textarea { font-family: inherit; }
 
 .reveal-text.visible {
   opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================
+   SPLIT TEXT ANIMATION
+   ========================================= */
+.split-text .word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  margin-right: 0.3em;
+}
+
+.split-text .word-inner {
+  display: inline-block;
+  transform: translateY(110%);
+  transition: transform 0.6s var(--ease-out);
+}
+
+.split-text.visible .word-inner {
+  transform: translateY(0);
+}
+
+/* =========================================
+   STAGGER ANIMATIONS
+   ========================================= */
+.stagger-item {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+}
+
+.stagger-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================
+   RECOGNITION ROW ENHANCED
+   ========================================= */
+.recognition-row {
+  position: relative;
+}
+
+.recognition-row::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--orange);
+  transition: width 0.4s var(--ease-out);
+}
+
+.recognition-row:hover::before {
+  width: 60px;
+}
+
+/* =========================================
+   CLIENT LOGO STAGGER
+   ========================================= */
+.client-logo {
+  transform: translateY(16px);
+  transition: opacity var(--transition), transform 0.6s var(--ease-out);
+}
+
+.client-logo.visible {
   transform: translateY(0);
 }
 
@@ -1093,6 +1280,19 @@ input, textarea { font-family: inherit; }
 }
 
 /* =========================================
+   HIDE CURSOR ON TOUCH / MOBILE
+   ========================================= */
+@media (pointer: coarse), (hover: none) {
+  .cursor, .cursor-follower { display: none !important; }
+}
+
+@media (max-width: 768px) {
+  .cursor, .cursor-follower { display: none !important; }
+  .video-break { height: 35vh; min-height: 200px; }
+  .video-break-alt { height: 25vh; min-height: 160px; }
+}
+
+/* =========================================
    REDUCED MOTION
    ========================================= */
 @media (prefers-reduced-motion: reduce) {
@@ -1103,8 +1303,14 @@ input, textarea { font-family: inherit; }
 
   .ticker-track { animation: none !important; }
 
-  .fade-up, .reveal-text {
+  .fade-up, .reveal-text, .stagger-item, .client-logo {
     opacity: 1 !important;
     transform: none !important;
   }
+
+  .split-text .word-inner {
+    transform: none !important;
+  }
+
+  .cursor, .cursor-follower { display: none !important; }
 }
