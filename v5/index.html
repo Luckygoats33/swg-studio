@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SWG Studio | Websites, Growth Systems & Interactive Experiences</title>
+  <meta name="description" content="We build websites that convert, growth systems that connect, and interactive experiences people remember. Diagnose. Align. Build. Measure.">
+  <meta property="og:title" content="SWG Studio | Digital Systems Lab">
+  <meta property="og:description" content="Websites, growth marketing, AI automation, and conversion systems. A working digital systems lab.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "SWG Studio",
+    "description": "Digital systems lab: web design, growth marketing, AI automation, and conversion systems.",
+    "url": "https://swg.studio"
+  }
+  </script>
+</head>
+<body>
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo" aria-label="SWG Studio home">
+        <span class="logo-text">SWG</span><span class="logo-dot"></span><span class="logo-sub">studio</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#lab">Lab</a></li>
+        <li><a href="#plans">Plans</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <a href="#start" class="nav-cta">Start a Project</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" aria-hidden="true">
+    <ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#lab">Lab</a></li>
+      <li><a href="#plans">Plans</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#start" class="mobile-cta">Start a Project</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <canvas id="gradient-canvas" aria-hidden="true"></canvas>
+    <div class="hero-particles" aria-hidden="true"></div>
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        Digital Systems Lab
+      </div>
+      <h1 class="reveal">
+        <span class="hero-line">Strong parts.</span>
+        <span class="hero-line">Strong <em>connections.</em></span>
+      </h1>
+      <p class="hero-sub reveal">
+        We build websites that say what the business has become, growth systems that connect attention to revenue, and interactive experiences people remember.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#start" class="btn btn-glow">
+          <span>Start a project</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#diagnostic" class="btn btn-outline">Where does it hurt?</a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="hero-stat">
+          <span class="hero-stat-value" data-count="12" data-suffix="+">0</span>
+          <span class="hero-stat-label">Years</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-value" data-count="200" data-suffix="+">0</span>
+          <span class="hero-stat-label">Projects</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-value" data-count="98" data-suffix="%">0</span>
+          <span class="hero-stat-label">Retention</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator" aria-hidden="true">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker" aria-label="Capabilities">
+    <div class="ticker-track">
+      <span class="ticker-item ticker-blue">Web Design</span>
+      <span class="ticker-sep">&bull;</span>
+      <span class="ticker-item ticker-green">Growth Marketing</span>
+      <span class="ticker-sep">&bull;</span>
+      <span class="ticker-item ticker-purple">AI Automation</span>
+      <span class="ticker-sep">&bull;</span>
+      <span class="ticker-item ticker-orange">Conversion Analytics</span>
+      <span class="ticker-sep">&bull;</span>
+      <span class="ticker-item ticker-blue">Web Design</span>
+      <span class="ticker-sep">&bull;</span>
+      <span class="ticker-item ticker-green">Growth Marketing</span>
+      <span class="ticker-sep">&bull;</span>
+      <span class="ticker-item ticker-purple">AI Automation</span>
+      <span class="ticker-sep">&bull;</span>
+      <span class="ticker-item ticker-orange">Conversion Analytics</span>
+      <span class="ticker-sep">&bull;</span>
+    </div>
+  </div>
+
+  <!-- DIAGNOSTIC -->
+  <section class="section" id="diagnostic">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag tag-coral">Diagnostic</span>
+        <h2 class="section-title">Where does it <em>hurt?</em></h2>
+        <p class="section-desc">Select the symptoms that sound familiar. We will recommend the right engagement.</p>
+      </div>
+      <div class="diagnostic-grid">
+        <button class="symptom-card reveal" type="button">
+          <div class="symptom-accent accent-blue"></div>
+          <div class="symptom-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 9v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3>Site looks dated</h3>
+          <p>The website no longer represents what the business has become. Prospects leave before they understand the offer.</p>
+        </button>
+        <button class="symptom-card reveal" type="button">
+          <div class="symptom-accent accent-green"></div>
+          <div class="symptom-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 17l5-5-5-5M6 17l5-5-5-5"/></svg>
+          </div>
+          <h3>Traffic but no leads</h3>
+          <p>People arrive, scroll, and disappear. No conversion path. No qualification. No idea what happened.</p>
+        </button>
+        <button class="symptom-card reveal" type="button">
+          <div class="symptom-accent accent-purple"></div>
+          <div class="symptom-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <h3>Nobody knows what we do</h3>
+          <p>The messaging is vague, the positioning is generic, and every competitor sounds the same.</p>
+        </button>
+        <button class="symptom-card reveal" type="button">
+          <div class="symptom-accent accent-orange"></div>
+          <div class="symptom-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/></svg>
+          </div>
+          <h3>Paid media is leaking</h3>
+          <p>You spend on ads, but the landing pages do not convert. The campaign and the site feel like different companies.</p>
+        </button>
+        <button class="symptom-card reveal" type="button">
+          <div class="symptom-accent accent-coral"></div>
+          <div class="symptom-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          </div>
+          <h3>Cannot measure conversions</h3>
+          <p>Analytics exist but nobody trusts them. You cannot connect a campaign dollar to a closed deal.</p>
+        </button>
+        <button class="symptom-card reveal" type="button">
+          <div class="symptom-accent accent-blue"></div>
+          <div class="symptom-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          </div>
+          <h3>Systems do not talk</h3>
+          <p>The CRM, the email platform, the site, and the ad accounts are all separate. Nothing compounds.</p>
+        </button>
+      </div>
+      <div class="diagnostic-result" id="diagnostic-result">
+        <h3></h3>
+        <p class="recommendation"></p>
+        <span class="recommended-plan"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO BREAK -->
+  <div class="video-break" aria-hidden="true">
+    <video src="../assets/video/fiber-optic.mp4" autoplay loop muted playsinline preload="metadata"></video>
+    <div class="video-break-overlay"></div>
+    <div class="video-break-text">
+      <span class="vb-label">Four disciplines</span>
+      <span class="vb-title">One connected system</span>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="section section-dark" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag tag-blue">Services</span>
+        <h2 class="section-title">Integrated. Synchronized.<br><em>Resilient.</em></h2>
+        <p class="section-desc">Every piece we build is designed to work with the others.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card service-blue reveal">
+          <div class="service-glow"></div>
+          <span class="service-number">01</span>
+          <h3>Web Design &amp; Development</h3>
+          <p>Custom websites with clear messaging, conversion architecture, responsive performance, and a CMS your team can actually use.</p>
+          <div class="service-tags">
+            <span>Custom Design</span>
+            <span>Responsive</span>
+            <span>CMS</span>
+            <span>Motion</span>
+            <span>SEO</span>
+            <span>Accessibility</span>
+          </div>
+        </div>
+        <div class="service-card service-green reveal">
+          <div class="service-glow"></div>
+          <span class="service-number">02</span>
+          <h3>Growth Marketing</h3>
+          <p>Campaigns that connect to the site, landing pages that match the ad, email sequences that follow the funnel, and analytics that tell you what to do next.</p>
+          <div class="service-tags">
+            <span>Meta Ads</span>
+            <span>Google Ads</span>
+            <span>Landing Pages</span>
+            <span>Email</span>
+            <span>CRO</span>
+            <span>Content</span>
+          </div>
+        </div>
+        <div class="service-card service-purple reveal">
+          <div class="service-glow"></div>
+          <span class="service-number">03</span>
+          <h3>AI &amp; Automation</h3>
+          <p>Automated lead qualification, intelligent chatbots, content generation systems, workflow automation, and AI-powered analytics.</p>
+          <div class="service-tags">
+            <span>AI Agents</span>
+            <span>Workflows</span>
+            <span>Chatbots</span>
+            <span>Content AI</span>
+            <span>Integrations</span>
+          </div>
+        </div>
+        <div class="service-card service-orange reveal">
+          <div class="service-glow"></div>
+          <span class="service-number">04</span>
+          <h3>Conversion &amp; Analytics</h3>
+          <p>Event tracking that matters, attribution that works, dashboards that drive decisions, and A/B testing that proves the hypothesis.</p>
+          <div class="service-tags">
+            <span>GA4</span>
+            <span>GTM</span>
+            <span>Attribution</span>
+            <span>A/B Testing</span>
+            <span>Dashboards</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section" id="process">
+    <div class="container">
+      <div class="section-header centered reveal">
+        <span class="section-tag tag-green">Process</span>
+        <h2 class="section-title">Diagnose. Align. Build. <em>Measure.</em></h2>
+        <p class="section-desc">Every engagement follows the same logic.</p>
+      </div>
+      <div class="process-grid">
+        <div class="process-step reveal">
+          <div class="process-ring process-ring-blue">
+            <span>01</span>
+          </div>
+          <h3>Diagnose</h3>
+          <p>Audit the current state. Site, funnel, analytics, content, campaigns, technical debt. Find the real bottleneck.</p>
+        </div>
+        <div class="process-connector reveal" aria-hidden="true"></div>
+        <div class="process-step reveal">
+          <div class="process-ring process-ring-green">
+            <span>02</span>
+          </div>
+          <h3>Align</h3>
+          <p>Brand, messaging, UX strategy, conversion architecture, and campaign plan. One coherent direction.</p>
+        </div>
+        <div class="process-connector reveal" aria-hidden="true"></div>
+        <div class="process-step reveal">
+          <div class="process-ring process-ring-purple">
+            <span>03</span>
+          </div>
+          <h3>Build</h3>
+          <p>Design, develop, integrate, automate, and launch. Every piece connected. Nothing orphaned.</p>
+        </div>
+        <div class="process-connector reveal" aria-hidden="true"></div>
+        <div class="process-step reveal">
+          <div class="process-ring process-ring-orange">
+            <span>04</span>
+          </div>
+          <h3>Measure</h3>
+          <p>Track results, optimize performance, test hypotheses, and iterate. The system improves over time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="section section-dark" id="work">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag tag-orange">Work</span>
+        <h2 class="section-title">Proof, not <em>promises.</em></h2>
+        <p class="section-desc">Selected transformations across web design, growth systems, and interactive experiences.</p>
+      </div>
+      <div class="work-grid">
+        <div class="work-card reveal">
+          <div class="work-media">
+            <video src="../assets/video/case-study-01.mp4" autoplay loop muted playsinline preload="metadata" poster="../assets/img/case-study-01.png"></video>
+            <div class="work-media-overlay"></div>
+          </div>
+          <div class="work-body">
+            <span class="work-category cat-blue">Web + Growth</span>
+            <h3>E-commerce brand overhaul and connected ad system</h3>
+            <p>Complete rebuild from Shopify template to custom storefront with integrated Meta and Google campaigns.</p>
+            <div class="work-metrics">
+              <div class="work-metric">
+                <span class="metric-value metric-green">+340%</span>
+                <span class="metric-label">ROAS</span>
+              </div>
+              <div class="work-metric">
+                <span class="metric-value metric-blue">+2.8x</span>
+                <span class="metric-label">Conv Rate</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="work-card reveal">
+          <div class="work-media">
+            <video src="../assets/video/case-study-02.mp4" autoplay loop muted playsinline preload="metadata" poster="../assets/img/case-study-02.png"></video>
+            <div class="work-media-overlay"></div>
+          </div>
+          <div class="work-body">
+            <span class="work-category cat-purple">Interactive</span>
+            <h3>Diagnostic tool that qualifies and converts service leads</h3>
+            <p>Interactive assessment that segments visitors by need, recommends the right service, and books consultations.</p>
+            <div class="work-metrics">
+              <div class="work-metric">
+                <span class="metric-value metric-purple">+180%</span>
+                <span class="metric-label">Lead Qual</span>
+              </div>
+              <div class="work-metric">
+                <span class="metric-value metric-orange">-40%</span>
+                <span class="metric-label">Time to Close</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="work-card reveal">
+          <div class="work-media">
+            <video src="../assets/video/case-study-03.mp4" autoplay loop muted playsinline preload="metadata" poster="../assets/img/case-study-03.png"></video>
+            <div class="work-media-overlay"></div>
+          </div>
+          <div class="work-body">
+            <span class="work-category cat-orange">AI + Automation</span>
+            <h3>AI content engine and automated email architecture</h3>
+            <p>Custom content generation pipeline, 12-flow Klaviyo automation, and unified analytics dashboard.</p>
+            <div class="work-metrics">
+              <div class="work-metric">
+                <span class="metric-value metric-green">+220%</span>
+                <span class="metric-label">Email Rev</span>
+              </div>
+              <div class="work-metric">
+                <span class="metric-value metric-coral">8x</span>
+                <span class="metric-label">Content Vol</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANS -->
+  <section class="section" id="plans">
+    <div class="container">
+      <div class="section-header centered reveal">
+        <span class="section-tag tag-purple">Plans</span>
+        <h2 class="section-title">The number is not the mystery.<br>The <em>scope</em> is.</h2>
+        <p class="section-desc">Three clear paths. After a short diagnostic, you receive a fixed scope, fixed fee, and launch plan.</p>
+      </div>
+      <div class="plans-grid">
+        <div class="plan-card reveal">
+          <div class="plan-accent plan-accent-blue"></div>
+          <span class="plan-name">Foundation</span>
+          <h3>A website that finally says what the business has become.</h3>
+          <div class="plan-price">From <span class="amount">$12k</span></div>
+          <p class="plan-note">Best for established businesses with a weak or outdated digital presence.</p>
+          <ul class="plan-features">
+            <li>Discovery &amp; conversion workshop</li>
+            <li>Messaging hierarchy</li>
+            <li>Custom visual direction</li>
+            <li>5-8 page templates</li>
+            <li>Responsive + CMS</li>
+            <li>SEO baseline + GA4</li>
+            <li>Accessibility QA</li>
+          </ul>
+          <a href="#start" class="plan-cta plan-cta-blue">Start with Foundation</a>
+        </div>
+        <div class="plan-card plan-featured reveal">
+          <div class="plan-badge">Most Popular</div>
+          <div class="plan-accent plan-accent-gradient"></div>
+          <span class="plan-name">Growth System</span>
+          <h3>Not just a better site. A connected acquisition system.</h3>
+          <div class="plan-price">From <span class="amount">$25k</span></div>
+          <p class="plan-note">Best for teams running campaigns but losing continuity between attention and conversion.</p>
+          <ul class="plan-features">
+            <li>Everything in Foundation</li>
+            <li>Deeper positioning &amp; copy</li>
+            <li>8-15 page templates</li>
+            <li>Campaign landing system</li>
+            <li>CRM + form integration</li>
+            <li>Advanced motion design</li>
+            <li>Conversion event model</li>
+            <li>Post-launch optimization</li>
+          </ul>
+          <a href="#start" class="plan-cta plan-cta-glow">Start with Growth System</a>
+        </div>
+        <div class="plan-card reveal">
+          <div class="plan-accent plan-accent-purple"></div>
+          <span class="plan-name">Interactive Flagship</span>
+          <h3>Build the site people remember and the system your team can run.</h3>
+          <div class="plan-price">From <span class="amount">$45k</span></div>
+          <p class="plan-note">Best for launches, category creation, and brands that need a signature digital experience.</p>
+          <ul class="plan-features">
+            <li>Everything in Growth</li>
+            <li>Interaction concept</li>
+            <li>WebGL / 3D development</li>
+            <li>Interactive diagnostic tool</li>
+            <li>Device-quality adaptation</li>
+            <li>Custom interaction analytics</li>
+            <li>Lab component</li>
+            <li>Launch campaign support</li>
+          </ul>
+          <a href="#start" class="plan-cta plan-cta-purple">Start with Flagship</a>
+        </div>
+      </div>
+      <div class="plans-addon reveal">
+        <strong>Growth &amp; Optimization</strong> add-on available after launch, starting at $3,000/month. CRO, landing pages, paid creative, SEO content, analytics, and campaign management.
+      </div>
+    </div>
+  </section>
+
+  <!-- LAB -->
+  <section class="section section-dark" id="lab">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag tag-amber">Lab</span>
+        <h2 class="section-title">Experiments, not <em>opinions.</em></h2>
+        <p class="section-desc">Tools, teardowns, and interactive proof. We build the things we recommend.</p>
+      </div>
+      <div class="lab-grid">
+        <div class="lab-card reveal">
+          <span class="lab-type">Tool</span>
+          <h3>Landing Page Conversion Calculator</h3>
+          <p>Input your traffic, current conversion rate, and average deal size. See how much a 1% improvement is worth per year.</p>
+          <div class="lab-shimmer"></div>
+        </div>
+        <div class="lab-card reveal">
+          <span class="lab-type">Teardown</span>
+          <h3>What Your Homepage Says in 5 Seconds</h3>
+          <p>We recorded 50 five-second impressions on real homepages. The gap between what the site says and what visitors hear is the problem.</p>
+          <div class="lab-shimmer"></div>
+        </div>
+        <div class="lab-card reveal">
+          <span class="lab-type">Experiment</span>
+          <h3>Before/After: Campaign-to-Page Continuity</h3>
+          <p>Side-by-side comparison of a generic landing page versus one designed to match the ad that drove the click. With real conversion data.</p>
+          <div class="lab-shimmer"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <span class="section-tag tag-coral reveal">About</span>
+          <h2 class="section-title reveal">A studio, not a <em>factory.</em></h2>
+          <p class="reveal">SWG Studio is the digital services arm of Support Wellness Global. We build the websites, growth systems, and interactive experiences that SWG's organizational strategy needs to work in the real world.</p>
+          <p class="reveal">Small team. Senior operators. No account managers between you and the people doing the work. Every engagement is led by someone who has built, measured, and optimized the thing they are recommending.</p>
+          <p class="reveal">We work with businesses that have outgrown their digital presence, teams that need campaigns and websites to actually connect, and brands ready for something people remember.</p>
+        </div>
+        <div class="about-stats reveal">
+          <div class="stat-card stat-blue">
+            <span class="stat-value" data-count="12" data-suffix="+">0</span>
+            <span class="stat-label">Years building digital</span>
+          </div>
+          <div class="stat-card stat-green">
+            <span class="stat-value" data-count="200" data-suffix="+">0</span>
+            <span class="stat-label">Projects delivered</span>
+          </div>
+          <div class="stat-card stat-purple">
+            <span class="stat-value" data-count="40" data-prefix="$" data-suffix="M+">0</span>
+            <span class="stat-label">Ad spend managed</span>
+          </div>
+          <div class="stat-card stat-orange">
+            <span class="stat-value" data-count="98" data-suffix="%">0</span>
+            <span class="stat-label">Client retention</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="start">
+    <canvas id="cta-canvas" aria-hidden="true"></canvas>
+    <div class="container cta-content">
+      <span class="section-tag tag-white reveal">Start</span>
+      <h2 class="cta-title reveal">Can you fix it?<br>With SWG, <em>you can.</em></h2>
+      <p class="cta-sub reveal">Tell us where it hurts. We will send back a diagnosis, a recommended plan, and a fixed-fee proposal within 48 hours.</p>
+      <div class="cta-actions reveal">
+        <a href="mailto:will@supportwellnessglobal.com?subject=Project%20Inquiry%20-%20SWG%20Studio" class="btn btn-white">
+          <span>Start a conversation</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#diagnostic" class="btn btn-ghost">Run the diagnostic first</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <span class="footer-logo">SWG<span class="footer-dot"></span>studio</span>
+          <span class="footer-copy">&copy; 2026 Support Wellness Global</span>
+        </div>
+        <ul class="footer-links">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#plans">Plans</a></li>
+          <li><a href="#start">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
