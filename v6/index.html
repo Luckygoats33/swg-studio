@@ -4,20 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SWG Studio</title>
-  <meta name="description" content="Web design, growth marketing and connected systems for brands that sell online. Built from Oregon.">
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Archivo:wght@400;500&family=Archivo+Narrow:wght@500&display=swap" rel="stylesheet">
+  <meta name="description" content="Shopify stores, paid campaigns, conversion tracking, and automation built as one system. Oregon.">
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@700&f[]=switzer@400,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <nav class="nav" aria-label="Main">
     <div class="container nav-inner">
-      <a href="/" class="wordmark">SWG STUDIO</a>
+      <a href="/" class="wordmark">SWG Studio</a>
       <div class="nav-links">
         <a href="#work">Work</a>
         <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
       </div>
-      <a href="mailto:will@supportwellnessglobal.com" class="btn btn--primary nav-cta">Talk to us</a>
+      <a href="mailto:will@supportwellnessglobal.com" class="btn btn--accent">Start a project</a>
       <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
         <span></span><span></span>
       </button>
@@ -25,35 +27,95 @@
     <div class="mobile-menu" aria-hidden="true">
       <a href="#work">Work</a>
       <a href="#services">Services</a>
-      <a href="mailto:will@supportwellnessglobal.com">Talk to us</a>
+      <a href="#contact">Contact</a>
+      <a href="mailto:will@supportwellnessglobal.com">Start a project</a>
     </div>
   </nav>
 
-  <header class="hero">
-    <div class="container hero-inner">
-      <h1>YOUR STORE. YOUR ADS. ONE TEAM.</h1>
-      <p class="lead">Shopify stores, Meta and Google campaigns, analytics and automation. Built from Oregon.</p>
-      <a href="mailto:will@supportwellnessglobal.com" class="btn btn--primary">Start a project</a>
+  <header class="band hero">
+    <div class="container">
+      <h1>Store. Ads. Tracking. One team.</h1>
+      <p class="lead">Shopify stores, paid campaigns, conversion tracking, and automation built as one system.</p>
+      <a href="mailto:will@supportwellnessglobal.com" class="btn btn--accent">Start a project</a>
     </div>
   </header>
 
-  <section id="services" class="section">
+  <section id="work" class="band band--light">
     <div class="container">
-      <h2>WHAT WE BUILD</h2>
-      <div class="rows">
-        <div class="row">
+      <h2>The work</h2>
+      <div class="work-grid">
+        <a href="https://goatarma.com" class="work-card" target="_blank" rel="noopener">
+          <figure class="photo work-photo" data-slot="work-goatarma" data-alt="GoatArma product site">
+            <img src="images/goatarma.jpg" alt="GoatArma product site" width="1523" height="856" loading="lazy">
+          </figure>
+          <span class="work-name">GoatArma</span>
+        </a>
+        <a href="https://naturesturn.com" class="work-card" target="_blank" rel="noopener">
+          <figure class="photo work-photo" data-slot="work-nt" data-alt="Nature&#8217;s Turn store">
+            <img src="images/naturesturn.jpg" alt="Nature&#8217;s Turn store" width="1523" height="856" loading="lazy">
+          </figure>
+          <span class="work-name">Nature&#8217;s Turn</span>
+        </a>
+        <a href="https://camotoe.com" class="work-card" target="_blank" rel="noopener">
+          <figure class="photo work-photo" data-slot="work-ct" data-alt="CamoToe store">
+            <img src="images/camotoe.jpg" alt="CamoToe store" width="1523" height="856" loading="lazy">
+          </figure>
+          <span class="work-name">CamoToe</span>
+        </a>
+        <a href="https://luckygoats33.github.io/sunbreak-studio/" class="work-card" target="_blank" rel="noopener">
+          <figure class="photo work-photo" data-slot="work-sunbreak" data-alt="Sunbreak Studio site">
+            <img src="images/sunbreak.jpg" alt="Sunbreak Studio site" width="1523" height="856" loading="lazy">
+          </figure>
+          <span class="work-name">Sunbreak Studio</span>
+        </a>
+        <a href="https://luckygoats33.github.io/the-nail-ladie/" class="work-card" target="_blank" rel="noopener">
+          <figure class="photo work-photo" data-slot="work-nailladie" data-alt="The Nail Ladie site">
+            <img src="images/nailladie.jpg" alt="The Nail Ladie site" width="1523" height="856" loading="lazy">
+          </figure>
+          <span class="work-name">The Nail Ladie</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="band band--statement">
+    <div class="container">
+      <p class="statement">Every store we build connects to the ads and the tracking from day one.</p>
+    </div>
+  </div>
+
+  <section class="band band--light">
+    <div class="container case">
+      <figure class="photo case-photo" data-slot="case-goatarma" data-alt="GoatArma homepage">
+        <img src="images/goatarma.jpg" alt="GoatArma product site" width="1523" height="856" loading="lazy">
+      </figure>
+      <div class="case-text">
+        <p class="case-client">GoatArma</p>
+        <h2>Eight products. Lighthouse 100.</h2>
+        <p class="lead">Full product site on Kinsta. Eight pages with specs, comparisons, and use cases. Deployed over SFTP.</p>
+        <p class="case-stat"><span class="figure num">100</span> <span class="case-stat-label">Lighthouse performance</span></p>
+        <a href="https://goatarma.com" class="btn btn--outline" target="_blank" rel="noopener">See the site</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="band">
+    <div class="container">
+      <h2>What we build</h2>
+      <div class="services-list">
+        <div class="service">
           <h3>Web design and development</h3>
           <p>Shopify stores, custom sites, landing pages. Every page built to load fast and convert.</p>
         </div>
-        <div class="row">
+        <div class="service">
           <h3>Growth marketing</h3>
           <p>Meta and Google campaigns. The ads, the pages they land on, the attribution that connects them.</p>
         </div>
-        <div class="row">
+        <div class="service">
           <h3>AI and automation</h3>
           <p>Workflows that run without you. Email sequences, content systems, internal tools.</p>
         </div>
-        <div class="row">
+        <div class="service">
           <h3>Conversion analytics</h3>
           <p>Triple Whale, Google Analytics, custom dashboards. The numbers, not the guesses.</p>
         </div>
@@ -61,83 +123,18 @@
     </div>
   </section>
 
-  <div class="band band--ink">
+  <section id="contact" class="band band--light band--contact">
     <div class="container">
-      <p class="statement">Every store we build connects to the ads and the tracking from day one.</p>
-    </div>
-  </div>
-
-  <section class="section section--case">
-    <div class="container case">
-      <figure class="photo case-photo" data-slot="case-goatarma" data-alt="GoatArma product site homepage">
-        <img src="images/goatarma.jpg" alt="GoatArma product site" width="1523" height="856" loading="lazy">
-      </figure>
-      <div class="case-text">
-        <p class="case-client">GoatArma</p>
-        <h2>EIGHT PRODUCTS, ONE FAST SITE</h2>
-        <p class="lead">Full product site on Kinsta. Eight product pages with specs, use cases and comparison tables. Deployed over SFTP.</p>
-        <p class="case-stat"><span class="figure num">100</span> <span class="case-stat-label">Lighthouse performance</span></p>
-        <a href="https://goatarma.com" class="btn btn--secondary" target="_blank" rel="noopener">See the site</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="work" class="section">
-    <div class="container">
-      <h2>THE WORK</h2>
-      <div class="index">
-        <a href="https://goatarma.com" class="index-row" target="_blank" rel="noopener">
-          <span class="index-name">GoatArma</span>
-          <span class="index-desc">Product site, 8 pages, Kinsta</span>
-          <span class="index-year num">2026</span>
-        </a>
-        <a href="https://naturesturn.com" class="index-row" target="_blank" rel="noopener">
-          <span class="index-name">Nature&#8217;s Turn</span>
-          <span class="index-desc">Shopify store, Meta ads, Triple Whale</span>
-          <span class="index-year num">2026</span>
-        </a>
-        <a href="https://camotoe.com" class="index-row" target="_blank" rel="noopener">
-          <span class="index-name">CamoToe</span>
-          <span class="index-desc">Shopify store, Google and Meta ads, Klaviyo</span>
-          <span class="index-year num">2026</span>
-        </a>
-        <a href="https://luckygoats33.github.io/sunbreak-studio/" class="index-row" target="_blank" rel="noopener">
-          <span class="index-name">Sunbreak Studio</span>
-          <span class="index-desc">Studio site, design system v4</span>
-          <span class="index-year num">2026</span>
-        </a>
-        <a href="https://luckygoats33.github.io/the-nail-ladie/" class="index-row" target="_blank" rel="noopener">
-          <span class="index-name">The Nail Ladie</span>
-          <span class="index-desc">Business site</span>
-          <span class="index-year num">2026</span>
-        </a>
-      </div>
-
-      <div class="work-shots">
-        <figure class="photo card" data-slot="shot-nt" data-alt="Nature&#8217;s Turn Shopify store homepage">
-          <img src="images/naturesturn.jpg" alt="Nature&#8217;s Turn store" width="1523" height="856" loading="lazy">
-        </figure>
-        <figure class="photo card" data-slot="shot-ct" data-alt="CamoToe Shopify store homepage">
-          <img src="images/camotoe.jpg" alt="CamoToe store" width="1523" height="856" loading="lazy">
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="section section--contact">
-    <div class="container contact">
-      <h2>TALK TO US</h2>
-      <div class="contact-body">
-        <a href="mailto:will@supportwellnessglobal.com" class="contact-email">will@supportwellnessglobal.com</a>
-        <p>Describe what you sell and where the problem is. We will come back with what we would build and what it costs.</p>
-      </div>
+      <h2>Talk to us</h2>
+      <a href="mailto:will@supportwellnessglobal.com" class="contact-email">will@supportwellnessglobal.com</a>
+      <p class="lead">Describe what you sell and where the problem is. We will come back with what we would build and what it costs.</p>
     </div>
   </section>
 
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <span class="wordmark">SWG STUDIO</span>
+        <span class="wordmark">SWG Studio</span>
         <p class="footer-legal">&copy; 2026 Support Wellness Global</p>
       </div>
       <nav class="footer-nav" aria-label="Footer">
