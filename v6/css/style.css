@@ -8,8 +8,8 @@
 @import url("../base.css");
 
 /* ---- HEADINGS ---- */
-h1 { font-size: var(--text-display); font-weight: 700; letter-spacing: var(--tracking-display); line-height: 1.05; max-width: 20ch; }
-h2 { font-size: var(--text-section); font-weight: 700; letter-spacing: var(--tracking-display); line-height: 1.1; max-width: 30ch; }
+h1 { font-size: var(--text-display); font-weight: 700; letter-spacing: var(--tracking-display); line-height: 1.05; max-width: 20ch; text-wrap: balance; }
+h2 { font-size: var(--text-section); font-weight: 700; letter-spacing: var(--tracking-display); line-height: 1.1; max-width: 30ch; text-wrap: balance; }
 h3 { font-size: var(--text-title); font-weight: 700; line-height: 1.2; max-width: 40ch; }
 .lead { font-size: var(--text-lead); line-height: 1.45; max-width: 52ch; }
 
@@ -234,13 +234,7 @@ h3 { font-size: var(--text-title); font-weight: 700; line-height: 1.2; max-width
   border: var(--rule-hair) solid var(--color-rule);
 }
 
-.case-client {
-  font: 500 var(--text-sm)/1.4 var(--font-body);
-  color: var(--color-ink-2);
-}
-
 .case-text h2 {
-  margin-top: var(--space-sm);
   max-width: 16ch;
 }
 
